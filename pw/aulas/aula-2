@@ -1,0 +1,175 @@
+# PERÍCIA DE ESTRUTURA
+
+*O que o HTML diz sobre uma página quando ninguém está olhando a tela*
+
+**Programação Web — Aula 2 de 20 · HTML5 Semântico**
+
+## 🎯 MISSÃO
+
+Duas páginas podem ser idênticas na tela e completamente diferentes por dentro. Sua missão é abrir sites reais e descobrir o que a marcação revela — ou esconde — sobre a estrutura do conteúdo.
+
+- Escolha um site com bastante conteúdo (portal de notícias, blog, site institucional).
+- Use a aba Elements do DevTools (F12) e, quando indicado, o painel Accessibility.
+- Preencha à mão. Onde houver retângulo em branco, desenhe.
+- Não existe gabarito: o que vale é a justificativa que você escreve.
+
+**⏱️ Tempo:** 40 minutos     **👥 Formato:** individual, conferindo cada rodada com o colega ao lado
+
+> **Nome:** Arthur Madeira Souza   **Turma:** Progração Web   **Data:** 14 / 08 /2026
+
+## RODADA 01 — Div soup × semântico
+
+> `Arquivos pagina-a.html e pagina-b.html (ambiente virtual da disciplina)`
+
+Os dois trechos abaixo produzem exatamente a mesma tela. Um deles não diz nada sobre o que é cada parte. Para cada div numerada, escreva o elemento semântico que a substituiria.
+
+```text
+<!-- PAGINA A -->                     <!-- PAGINA B -->
+<div class="topo">      (1) ______   <header>
+  <div class="menu">    (2) ______     <nav>
+<div class="miolo">     (3) ______   <main>
+  <div class="post">    (4) ______     <article>
+  <div class="lateral"> (5) ______     <aside>
+<div class="rodape">    (6) ______   <footer>
+```
+
+**Sua análise:**
+
+1. As duas páginas renderizam igual. O que exatamente a página B tem que a A não tem?
+A página B possui elementos HTML semânticos. Isso significa que as tags indicam a função de cada parte da página, como <nav> para navegação e <main> para o conteúdo principal. A página A usa principalmente <div> com classes, que não possuem esse significado por si só.
+
+2. Escolha UMA das div acima e explique como você decidiu qual elemento a substitui.
+
+Escolhi a <div class="menu">. Como ela contém os links “Disponíveis”, “Como adotar” e “Contato”, sua função é de navegação. Por isso, o elemento mais adequado para substituí-la é <nav>.
+
+3. Sobrou algum caso em que o div é a escolha certa? Quando?
+Sim. O <div> é adequado quando queremos apenas agrupar elementos para organização ou layout e não existe um elemento semântico específico. Um exemplo é a <div class="conteudo">, que agrupa o <main> e o <aside>.
+
+## RODADA 02 — O mapa da página
+
+> `Site real → DevTools → aba Elements → colapsar os nós e olhar só o primeiro nível dentro de <body>`
+
+Desenhe no retângulo abaixo onde ficam as grandes regiões da página que você escolheu, escrevendo o nome do elemento que a marca (ou "div" se não houver elemento semântico):
+
+```text
++--------------------------------------------------+
+|                     header                       |
++--------------------------------------------------+
+|                      nav                         |
++--------------------------------------------------+
+|                                                  |
+|        main                      aside            |
+|                                                  |
+|                                                  |
++--------------------------------------------------+
+|                     footer                       |
++--------------------------------------------------+         
+  Site investigado: pagina-b.html
+
+```
+
+**Sua análise:**
+
+1. Quantas regiões você conseguiu identificar sem abrir os nós filhos?
+
+Consegui identificar quatro regiões no primeiro nível do <body>: <header>, <nav>, <div class="conteudo"> e <footer>. Dentro da div conteudo ficam o <main> e o <aside>.
+
+2. O site usa elementos semânticos ou div com class? Anote dois nomes de class que você viu.
+
+A página usa principalmente elementos semânticos, mas também utiliza classes para organização e estilização. Duas classes encontradas foram conteudo e selo.
+
+3. Existe mais de um `<main>` na página? Deveria existir?
+
+Não. Existe apenas um <main> na página. Isso é adequado, pois ele representa o conteúdo principal do documento.
+
+## RODADA 03 — A hierarquia dos títulos
+
+> `Ainda no mesmo site: no Console, digitar $$('h1,h2,h3,h4').map(h => h.tagName + ' ' + h.innerText.slice(0,40))`
+
+Esse comando lista os títulos na ordem em que aparecem no código. Anote os primeiros e procure o problema:
+
+```text
+ordem   tag    texto do titulo
+1. H1 — Pets disponíveis para adoção
+2. H2 — Luna
+3. H3 — Cadela · 3 anos · porte médio
+4. H2 — Thor
+5. H3 — Cão · 1 ano · porte grande
+
+**Sua análise:**
+
+1. Quantos h1 a página tem? Se tem mais de um, qual seria o problema disso?
+
+A página possui apenas um <h1>, “Pets disponíveis para adoção”. Isso deixa claro qual é o título principal do conteúdo. Se houvesse vários <h1> sem necessidade, a hierarquia poderia ficar menos clara para leitores de tela e para quem analisa a estrutura da página.
+
+2. Algum nível foi pulado (um h2 seguido direto de um h4)? Anote onde.
+
+Não. Não houve salto de nível. A página utiliza <h1>, depois <h2> e <h3>.
+
+3. Lendo só os títulos, você entende de que a página trata? Se não, o que está faltando?
+
+Sim. Pelos títulos é possível entender que a página fala sobre pets disponíveis para adoção, apresenta animais como Luna e Thor e também possui uma parte explicando como adotar.
+
+## RODADA 04 — O alt que ninguém lê (mas alguém ouve)
+
+> `No Console: $$('img').slice(0,3).map(i => i.alt || '(SEM ALT)')`
+
+Um leitor de tela lê o alt em voz alta no lugar da imagem. Anote os três primeiros e classifique cada um:
+
+```text
+img 1  alt = "foto" _______________________________________
+       ( ) descritivo  (x ) inutil  ( ) ausente  ( ) vazio proposital
+
+img 2  alt = "incendio lixão itacetuba " _______________________________________
+       ( x) descritivo  ( ) inutil  ( ) ausente  ( ) vazio proposital
+
+img 3  alt = "cachorro perdido"
+       ( x) descritivo  ( ) inutil  ( ) ausente  ( ) vazio proposital
+```
+
+**Sua análise:**
+
+1. Algum alt era só o nome do arquivo ("banner-2024-final.jpg")? Por que isso é inútil?
+
+Um alt contendo apenas o nome do arquivo seria inútil porque não explicaria o conteúdo ou a função da imagem para uma pessoa usando leitor de tela.
+2. Feche os olhos e imagine ouvir a página. O que você perderia com esses alt?
+
+imagens importantes sem textos alternativos adequados, eu perderia as informações visuais transmitidas por elas.
+
+3. Reescreva o pior dos três de forma que descreva a imagem em menos de 12 palavras.
+
+alt "imagem de um homem preso em penitenciaria"
+
+## RODADA 05 — O link fora de contexto
+
+> `No Console: $$('a').slice(0,10).map(a => a.innerText.trim()).filter(t => t)`
+
+Leitores de tela permitem navegar por uma lista só de links, sem o texto ao redor. Anote 3 textos de link e teste se sobrevivem sozinhos:
+
+```text
+link 1: “Disponíveis”  faz sentido sozinho? 
+(x )sim ( )nao
+link 2: “Como adotar”  faz sentido sozinho? 
+(x)sim ( )nao
+link 3: “Contato”  faz sentido sozinho? 
+( x)sim ( )nao
+```
+
+**Sua análise:**
+
+1. Você encontrou algum "clique aqui", "saiba mais" ou "leia"? Para onde ele levava?
+
+sim , encontrei e leva a outros sites relacionados aos links. 
+2. Reescreva um desses textos para que ele diga o destino sem depender da frase ao redor.
+
+“Disponíveis” poderia ser reescrito como “Ver pets disponíveis para adoção”.
+
+3. Algum link abria em nova aba? Como você descobriu isso olhando o código?
+sim, havia um link qu abria uma nova aba, eu decobri ao passar ao mouse em cima e ver que era clicável.
+## 🏆 DESAFIO BÔNUS
+
+Terminou antes do tempo? Escolha um destes:
+
+- Rode a auditoria Accessibility do Lighthouse (DevTools → Lighthouse) no site que você investigou. Qual foi a nota e qual o primeiro problema apontado?
+- Procure na página um texto que PARECE título (grande e em negrito) mas não é um h. Como você confirmou?
+- Encontre um site que use `<table>` para fazer layout em vez de dados tabulares. Por que isso é um problema de acessibilidade?
