@@ -1,0 +1,122 @@
+/* ESTILO GERAL */
+:root {
+    --cor-primaria: #e7be08;
+    --cor-primaria-clara: #fce478;
+    --cor-fundo: #000000;
+    --cor-superficie: #171717;
+    --cor-texto: #ffffff;
+    --cor-texto-escuro: #111111;
+    --largura-interface: 1280px;
+    --espacamento: 1rem;
+    --borda-arredondada: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+.interface {
+    width: min(100% - 2rem, var(--largura-interface));
+    margin: 0 auto;
+}
+
+.pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: var(--espacamento);
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-escuro);
+}
+
+.pular-conteudo:focus {
+    top: var(--espacamento);
+}
+
+.cabecalho {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--cor-superficie);
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logo span,
+.destaque {
+    color: var(--cor-primaria);
+}
+
+.menu-principal ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: var(--espacamento);
+    list-style: none;
+}
+
+.menu-principal a {
+    text-decoration: none;
+}
+
+.topo-do-site {
+    display: flex;
+    min-height: 65vh;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.topo-do-site h1 {
+    max-width: 18ch;
+    margin: 0.5rem 0 1rem;
+    font-size: clamp(2rem, 8vw, 4rem);
+    line-height: 1.1;
+}
+
+.topo-do-site p:not(.destaque) {
+    max-width: 55ch;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--borda-arredondada);
+    background-color: var(--cor-primaria-clara);
+    color: var(--cor-texto-escuro);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.rodape {
+    padding: 2rem 0;
+    border-top: 2px solid var(--cor-primaria);
+    text-align: center;
+}
+
+:focus-visible {
+    outline: 3px solid var(--cor-primaria);
+    outline-offset: 4px;
+}
