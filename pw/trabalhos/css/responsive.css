@@ -1,0 +1,27 @@
+/* TABLETS E TELAS MAIORES */
+@media screen and (min-width: 48rem) {
+    .cabecalho-conteudo {
+        flex-wrap: nowrap;
+    }
+
+    .menu-principal {
+        width: auto;
+        order: initial;
+    }
+
+    .menu-principal ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .menu-principal a {
+        padding-inline: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .botao-cabecalho {
+        padding-inline: 1.5rem;
+        font-size: 0.875rem;
+        white-space: nowrap;
+    }
+}
