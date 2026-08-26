@@ -121,6 +121,12 @@ a {
     padding: 4rem 0;
 }
 
+.topo-conteudo {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
 .topo-do-site h1 {
     max-width: 18ch;
     margin: 0.5rem 0 1rem;
@@ -130,6 +136,43 @@ a {
 
 .topo-do-site p:not(.destaque) {
     max-width: 55ch;
+}
+
+.acoes-topo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.link-servicos {
+    margin-top: 1.5rem;
+    color: var(--cor-primaria-clara);
+    font-weight: 600;
+    text-underline-offset: 0.3rem;
+}
+
+.img-topo-site {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+.img-topo-site img {
+    display: block;
+    width: min(70%, 167px);
+    height: auto;
+}
+
+@keyframes flutuar {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(1.25rem);
+    }
 }
 
 .botao {
@@ -158,4 +201,14 @@ a {
 :focus-visible {
     outline: 3px solid var(--cor-primaria);
     outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .img-topo-site {
+        animation: none;
+    }
 }
