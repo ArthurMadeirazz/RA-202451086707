@@ -1,0 +1,255 @@
+# PERÍCIA DE ESTILO
+
+**Programação Web — Aula 4 de 20**  
+**Tema:** CSS, seletores, cascata e Box Model
+
+**Nome:** Arthur Madeira Souza  
+**Turma:** ____________________  
+**Data:** 10/09/2026  
+
+## RODADA 01 — As regras que valem e as que morreram
+
+**Site analisado:** página institucional com um título principal.
+
+```html
+<h1 class="titulo destaque">Segurança na Computação em Nuvem</h1>
+```
+
+```text
+elemento inspecionado: <h1>  class="titulo destaque"
+
+regras que VALEM:
+  1. seletor: .destaque       propriedade: color: #17365d
+  2. seletor: h1              propriedade: font-size: 32px
+
+regras RISCADAS:
+  1. seletor: .titulo         propriedade: color: #666666
+```
+
+### Análise
+
+1. Havia **três regras diferentes** tentando estilizar o elemento.
+
+2. A regra `.titulo` perdeu porque outra declaração de cor apareceu depois no CSS ou possuía maior prioridade na cascata. Em caso de mesma especificidade, vence a regra declarada por último.
+
+3. Não havia nenhuma declaração com `!important`. A decisão ocorreu pela combinação de especificidade e ordem de declaração.
+
+---
+
+## RODADA 02 — De onde veio esse valor?
+
+| Propriedade | Valor final | Veio de qual seletor? |
+|---|---:|---|
+| `color` | `rgb(23, 54, 93)` | `.destaque` |
+| `font-size` | `32px` | `h1` |
+| `display` | `block` | Valor padrão do navegador |
+| `margin-top` | `21.44px` | Regra padrão do navegador para `h1` |
+
+### Análise
+
+1. As propriedades `display` e `margin-top` não estavam necessariamente declaradas no CSS da página. Elas receberam valores do **User Agent Stylesheet**, que é a folha de estilos padrão do navegador.
+
+2. O navegador converte unidades como `em`, `rem` e porcentagem para pixels porque o painel Computed mostra o valor final calculado. Por exemplo, se o tamanho-base for `16px`, então `2rem` será apresentado como `32px`.
+
+3. A propriedade que pode ser herdada do elemento pai é `color`. Propriedades relacionadas a texto, como cor e família tipográfica, normalmente são herdadas. Já `display`, `margin` e `font-size` geralmente não são herdadas automaticamente.
+
+---
+
+## RODADA 03 — Quem ganha: agora com a conta feita
+
+| Caixa | Seletor vencedor | Especificidade | Cor final |
+|---:|---|---|---|
+| 1 | `p` | `(0, 0, 1)` | `blue` |
+| 2 | `#caixa2 p` | `(1, 0, 1)` | `red` |
+| 3 | `.caixa3 p` | `(0, 1, 1)` | `green` |
+| 4 | `#caixa4 .texto` | `(1, 1, 0)` | `purple` |
+| 5 | `main section p` | `(0, 0, 3)` | `orange` |
+| 6 | `p.texto.destaque` | `(0, 2, 1)` | `darkblue` |
+| 7 | Nenhum seletor direto | `(0, 0, 0)` | Herdada do elemento pai |
+| 8 | `p[classe="especial"]` | `(0, 1, 1)` | `brown` |
+
+### Análise
+
+1. Na caixa 2, a regra com classe perdeu para a regra com `id + elemento` porque o seletor com ID possui maior especificidade.
+
+   ```css
+   .caixa2 {
+     color: blue;
+   }
+
+   #caixa2 p {
+     color: red;
+   }
+   ```
+
+   Comparação:
+
+   ```text
+   .caixa2   = (0, 1, 0)
+   #caixa2 p = (1, 0, 1)
+   ```
+
+   Como o primeiro valor corresponde aos IDs, a segunda regra é mais forte.
+
+2. Nas caixas 3, as regras tinham a mesma especificidade. Nesse caso, o navegador considerou a ordem de declaração no CSS. A regra que apareceu por último venceu.
+
+3. Na caixa 7, nenhuma regra selecionava diretamente o parágrafo. A cor veio por **herança do elemento pai**. Quando uma propriedade textual não é definida no próprio elemento, o navegador pode utilizar o valor herdado do pai.
+
+---
+
+## RODADA 04 — A caixa é maior do que você pediu
+
+Valores observados no elemento:
+
+```text
+margin: 16px
+border: 1px
+padding: 12px
+content: 300px x 80px
+```
+
+```text
+largura total ocupada = content + padding*2 + border*2 + margin*2
+
+largura total ocupada
+= 300 + 12*2 + 1*2 + 16*2
+= 300 + 24 + 2 + 32
+= 358px
+```
+
+**Largura total ocupada: 358px**
+
+### Análise
+
+1. A camada que empurra os elementos vizinhos para longe, sem pintar nada, é a **margem (`margin`)**.
+
+2. A camada que aumenta a área clicável do elemento junto com o fundo é o **padding**. Ele fica dentro da caixa e recebe o plano de fundo do elemento.
+
+3. A largura indicada em `width` nem sempre é igual à largura total ocupada na tela. Com `box-sizing: content-box`, o valor de `width` representa apenas o conteúdo. Padding, bordas e margens são acrescentados separadamente.
+
+---
+
+## RODADA 05 — O experimento do `box-sizing`
+
+```text
+width declarado no CSS: 300px
+
+box-sizing: content-box
+-> largura na tela: 326px
+
+box-sizing: border-box
+-> largura na tela: 300px
+
+diferença entre as duas: 26px
+
+essa diferença corresponde a:
+padding dos dois lados + bordas dos dois lados
+```
+
+Cálculo:
+
+```text
+padding: 12px + 12px = 24px
+border: 1px + 1px = 2px
+
+diferença total = 24px + 2px = 26px
+```
+
+### Análise
+
+1. A largura na tela fica igual à largura declarada quando usamos:
+
+   ```css
+   box-sizing: border-box;
+   ```
+
+2. Muitos projetos começam o CSS com:
+
+   ```css
+   * {
+     box-sizing: border-box;
+   }
+   ```
+
+   Isso torna o dimensionamento mais previsível, pois o valor de `width` já inclui o conteúdo, o padding e a borda. Assim, adicionar padding não aumenta inesperadamente o tamanho externo do elemento.
+
+3. Com `border-box`, a caixa externa mantém a largura declarada. Ao aumentar o padding, o conteúdo interno diminui para que a caixa continue com o mesmo tamanho.
+
+---
+
+## DESAFIO BÔNUS
+
+### Criação de regra pelo DevTools
+
+Ao clicar no botão `+` no painel Styles, o DevTools normalmente cria uma regra utilizando o seletor do elemento atualmente selecionado.
+
+Exemplo:
+
+```css
+h1.titulo.destaque {
+}
+```
+
+O navegador escolhe esse seletor porque ele identifica diretamente o elemento inspecionado e permite testar alterações específicas sem modificar imediatamente o arquivo CSS original.
+
+### Estilo inline
+
+Um estilo inline pode ser criado assim:
+
+```html
+<p style="color: red;">Texto destacado</p>
+```
+
+Uma regra comum de uma folha de estilos pode tentar sobrescrevê-lo:
+
+```css
+p {
+  color: blue;
+}
+```
+
+Nesse caso, o estilo inline normalmente vence:
+
+```text
+style inline > seletor de elemento
+```
+
+Entretanto, uma regra com `!important` pode sobrescrever o estilo inline:
+
+```css
+p {
+  color: blue !important;
+}
+```
+
+O uso de `!important` deve ser evitado sempre que possível, pois dificulta a manutenção do CSS.
+
+### Colapso de margens verticais
+
+Quando dois elementos irmãos possuem margens verticais, o espaço entre eles geralmente não é a soma das duas margens. O navegador aplica o chamado **colapso de margens** e utiliza, normalmente, a maior margem.
+
+Exemplo:
+
+```css
+.elemento-a {
+  margin-bottom: 20px;
+}
+
+.elemento-b {
+  margin-top: 30px;
+}
+```
+
+O espaço entre os elementos tende a ser:
+
+```text
+30px
+```
+
+e não:
+
+```text
+20px + 30px = 50px
+```
+
+Esse comportamento pode ser alterado quando existe, por exemplo, `padding`, `border`, flexbox ou grid entre os elementos.
