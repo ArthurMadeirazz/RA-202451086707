@@ -33,11 +33,13 @@ a {
     color: inherit;
 }
 
+/* INTERFACE PRINCIPAL */
 .interface {
     width: min(100% - 2rem, var(--largura-interface));
     margin: 0 auto;
 }
 
+/* ACESSIBILIDADE - LINK PARA PULAR O MENU */
 .pular-conteudo {
     position: absolute;
     top: -100px;
@@ -52,6 +54,7 @@ a {
     top: var(--espacamento);
 }
 
+/* ESTILOS DO CABEÇALHO */
 .cabecalho {
     padding: 1.25rem 0;
     border-bottom: 1px solid var(--cor-superficie);
@@ -75,10 +78,12 @@ a {
     height: 36px;
 }
 
+/* DESTAQUES EM AMARELO */
 .destaque {
     color: var(--cor-primaria);
 }
 
+/* MENU PRINCIPAL */
 .menu-principal {
     width: 100%;
     order: 3;
@@ -114,6 +119,7 @@ a {
     font-size: 0.75rem;
 }
 
+/* TOPO DO SITE */
 .topo-do-site {
     display: flex;
     min-height: 65vh;
@@ -165,6 +171,7 @@ a {
     height: auto;
 }
 
+/* APRESENTAÇÃO DAS PÁGINAS INTERNAS */
 .cabecalho-pagina {
     padding: 4rem 0 2rem;
 }
@@ -180,6 +187,7 @@ a {
     max-width: 65ch;
 }
 
+/* LISTA E CARTÕES DE SERVIÇOS */
 .secao-servicos {
     padding: 2rem 0 5rem;
 }
@@ -278,6 +286,7 @@ a {
     text-underline-offset: 0.3rem;
 }
 
+/* ANIMAÇÃO DA IMAGEM DO TOPO */
 @keyframes flutuar {
     from {
         transform: translateY(0);
@@ -288,6 +297,7 @@ a {
     }
 }
 
+/* BOTÕES */
 .botao {
     display: inline-block;
     margin-top: 1.5rem;
@@ -305,17 +315,20 @@ a {
     transform: scale(1.03);
 }
 
+/* RODAPÉ */
 .rodape {
     padding: 2rem 0;
     border-top: 2px solid var(--cor-primaria);
     text-align: center;
 }
 
+/* FOCO DA NAVEGAÇÃO POR TECLADO */
 :focus-visible {
     outline: 3px solid var(--cor-primaria);
     outline-offset: 4px;
 }
 
+/* REDUÇÃO DE MOVIMENTO PARA ACESSIBILIDADE */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;

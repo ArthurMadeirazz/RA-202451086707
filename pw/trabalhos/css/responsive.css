@@ -1,5 +1,6 @@
 /* TABLETS E TELAS MAIORES */
 @media screen and (min-width: 48rem) {
+    /* CABEÇALHO */
     .cabecalho-conteudo {
         flex-wrap: nowrap;
     }
@@ -25,6 +26,7 @@
         white-space: nowrap;
     }
 
+    /* TOPO DO SITE */
     .topo-conteudo {
         grid-template-columns: minmax(0, 1.25fr) minmax(12rem, 0.75fr);
     }
@@ -33,6 +35,7 @@
         width: 167px;
     }
 
+    /* LISTA DE SERVIÇOS */
     .grade-servicos {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -40,6 +43,7 @@
 
 /* DESKTOPS */
 @media screen and (min-width: 70rem) {
+    /* LISTA DE SERVIÇOS */
     .grade-servicos {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
