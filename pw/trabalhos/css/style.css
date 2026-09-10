@@ -165,6 +165,119 @@ a {
     height: auto;
 }
 
+.cabecalho-pagina {
+    padding: 4rem 0 2rem;
+}
+
+.cabecalho-pagina h1 {
+    max-width: 20ch;
+    margin: 0.5rem 0 1rem;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    line-height: 1.15;
+}
+
+.cabecalho-pagina p:last-child {
+    max-width: 65ch;
+}
+
+.secao-servicos {
+    padding: 2rem 0 5rem;
+}
+
+.secao-servicos h2 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
+}
+
+.grade-servicos {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.cartao-servico {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #2e2e2e;
+    border-radius: 1rem;
+    background-color: var(--cor-superficie);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.cartao-servico:hover {
+    border-color: var(--cor-primaria);
+    transform: translateY(-0.25rem);
+}
+
+.cartao-servico-imagem {
+    display: grid;
+    min-height: 10rem;
+    place-items: center;
+    background: linear-gradient(135deg, #252525, #0c0c0c);
+}
+
+.cartao-servico-imagem img {
+    display: block;
+    width: auto;
+    height: 7rem;
+    object-fit: contain;
+}
+
+.cartao-servico-conteudo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.categoria-servico {
+    color: var(--cor-primaria-clara);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.cartao-servico h3 {
+    margin: 0.35rem 0 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.cartao-servico-conteudo > p:not(.categoria-servico) {
+    color: #d6d6d6;
+    font-size: 0.9375rem;
+}
+
+.dados-servico {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid #343434;
+}
+
+.dados-servico dt {
+    color: #a9a9a9;
+    font-size: 0.75rem;
+}
+
+.dados-servico dd {
+    margin-top: 0.15rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.link-detalhes {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    color: var(--cor-primaria-clara);
+    font-weight: 700;
+    text-underline-offset: 0.3rem;
+}
+
 @keyframes flutuar {
     from {
         transform: translateY(0);
@@ -210,5 +323,9 @@ a {
 
     .img-topo-site {
         animation: none;
+    }
+
+    .cartao-servico {
+        transition: none;
     }
 }
