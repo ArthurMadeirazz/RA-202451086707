@@ -286,6 +286,97 @@ a {
     text-underline-offset: 0.3rem;
 }
 
+/* DETALHES DOS SERVIÇOS */
+.secao-detalhes {
+    padding: 2rem 0 5rem;
+}
+
+.secao-detalhes > .interface > h2 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
+}
+
+.lista-detalhes {
+    display: grid;
+    gap: 2rem;
+}
+
+.detalhe-servico {
+    display: grid;
+    scroll-margin-top: 1rem;
+    overflow: hidden;
+    border: 1px solid #2e2e2e;
+    border-radius: 1rem;
+    background-color: var(--cor-superficie);
+}
+
+.detalhe-servico:target {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 18px rgba(231, 190, 8, 0.25);
+}
+
+.detalhe-servico-imagem {
+    display: grid;
+    min-height: 14rem;
+    padding: 1.5rem;
+    place-items: center;
+    background: linear-gradient(135deg, #252525, #0c0c0c);
+}
+
+.detalhe-servico-imagem img {
+    display: block;
+    width: 100%;
+    max-width: 24rem;
+    max-height: 18rem;
+    object-fit: contain;
+}
+
+.detalhe-servico-conteudo {
+    padding: 1.5rem;
+}
+
+.detalhe-servico h2 {
+    margin: 0.35rem 0 1rem;
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
+    line-height: 1.2;
+}
+
+.detalhe-servico h3 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.125rem;
+}
+
+.informacoes-servico {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.informacoes-servico div {
+    padding: 1rem;
+    border-left: 3px solid var(--cor-primaria);
+    background-color: #222222;
+}
+
+.informacoes-servico dt {
+    color: #bdbdbd;
+    font-size: 0.75rem;
+}
+
+.informacoes-servico dd {
+    margin-top: 0.15rem;
+    font-weight: 600;
+}
+
+.etapas-servico {
+    padding-left: 1.25rem;
+    color: #d6d6d6;
+}
+
+.etapas-servico li + li {
+    margin-top: 0.35rem;
+}
+
 /* ANIMAÇÃO DA IMAGEM DO TOPO */
 @keyframes flutuar {
     from {
@@ -341,4 +432,5 @@ a {
     .cartao-servico {
         transition: none;
     }
+
 }

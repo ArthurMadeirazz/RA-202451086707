@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- CONFIGURAÇÕES DA PÁGINA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Consulte os detalhes dos serviços de retífica e recuperação realizados pela FMS Motores.">
+    <title>Detalhes dos serviços | FMS Motores</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ARQUIVOS CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- ACESSIBILIDADE - LINK PARA PULAR O MENU -->
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="interface cabecalho-conteudo">
+            <!-- LOGO FMS -->
+            <a class="logo" href="index.html" aria-label="Página inicial da FMS Motores">
+                <img src="img/logo-fms.png" alt="" width="83" height="36">
+            </a><!-- LOGO FMS FINAL -->
+
+            <!-- MENU PRINCIPAL -->
+            <nav class="menu-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html" aria-current="page">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                </ul>
+            </nav><!-- MENU PRINCIPAL FINAL -->
+
+            <!-- BOTÃO SOLICITAR ORÇAMENTO -->
+            <a class="botao botao-cabecalho" href="orcamento.html">Solicitar orçamento</a>
+        </div><!-- INTERFACE DO CABEÇALHO FINAL -->
+    </header><!-- CABEÇALHO FINAL -->
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal">
+        <!-- APRESENTAÇÃO DA PÁGINA DE DETALHES -->
+        <section class="cabecalho-pagina">
+            <div class="interface">
+                <p class="destaque">Conheça cada processo</p>
+                <h1>Detalhes dos nossos serviços</h1>
+                <p>Veja como cada serviço é realizado, quais componentes são trabalhados e o prazo estimado para
+                    execução.</p>
+            </div><!-- INTERFACE DA APRESENTAÇÃO FINAL -->
+        </section><!-- APRESENTAÇÃO DA PÁGINA DE DETALHES FINAL -->
+
+        <!-- DETALHES DOS SERVIÇOS -->
+        <section class="secao-detalhes" aria-labelledby="titulo-detalhes-servicos">
+            <div class="interface">
+                <h2 id="titulo-detalhes-servicos">Informações dos serviços</h2>
+
+                <div class="lista-detalhes">
+                    <!-- DETALHE RETÍFICA DE BLOCO -->
+                    <article class="detalhe-servico" id="retifica-de-bloco">
+                        <div class="detalhe-servico-imagem">
+                            <img src="img/UsinagemBloco.jpg" alt="Bloco de motor em processo de usinagem">
+                        </div><!-- IMAGEM DO DETALHE FINAL -->
+
+                        <div class="detalhe-servico-conteudo">
+                            <p class="categoria-servico">Bloco do motor</p>
+                            <h2>Retífica de bloco</h2>
+                            <p>O bloco é inspecionado e usinado para corrigir desgastes, riscos e deformações. O processo
+                                recupera as medidas adequadas e prepara o componente para trabalhar novamente com
+                                segurança.</p>
+
+                            <dl class="informacoes-servico">
+                                <div><dt>Componente trabalhado</dt><dd>Bloco do motor</dd></div>
+                                <div><dt>Prazo estimado</dt><dd>Conforme avaliação da peça</dd></div>
+                            </dl>
+
+                            <h3>Etapas principais</h3>
+                            <ul class="etapas-servico">
+                                <li>Limpeza e inspeção do bloco</li>
+                                <li>Medição dos cilindros e alojamentos</li>
+                                <li>Usinagem e conferência das medidas finais</li>
+                            </ul>
+
+                            <a class="botao" href="orcamento.html?servico=retifica-de-bloco">Solicitar orçamento</a>
+                        </div><!-- CONTEÚDO DO DETALHE FINAL -->
+                    </article><!-- DETALHE RETÍFICA DE BLOCO FINAL -->
+
+                    <!-- DETALHE BRUNIMENTO DE CILINDROS -->
+                    <article class="detalhe-servico" id="brunimento-de-cilindros">
+                        <div class="detalhe-servico-imagem">
+                            <img src="img/Brunimento.webp" alt="Cabeçote posicionado em equipamento de brunimento">
+                        </div><!-- IMAGEM DO DETALHE FINAL -->
+
+                        <div class="detalhe-servico-conteudo">
+                            <p class="categoria-servico">Bloco do motor</p>
+                            <h2>Brunimento de cilindros</h2>
+                            <p>O brunimento produz o acabamento correto nas paredes dos cilindros. Esse acabamento
+                                contribui para o assentamento dos anéis, a retenção do óleo e a vedação do conjunto.</p>
+
+                            <dl class="informacoes-servico">
+                                <div><dt>Componente trabalhado</dt><dd>Cilindros</dd></div>
+                                <div><dt>Prazo estimado</dt><dd>Conforme avaliação da peça</dd></div>
+                            </dl>
+
+                            <h3>Etapas principais</h3>
+                            <ul class="etapas-servico">
+                                <li>Medição do diâmetro dos cilindros</li>
+                                <li>Brunimento com equipamento adequado</li>
+                                <li>Limpeza e verificação do acabamento</li>
+                            </ul>
+
+                            <a class="botao" href="orcamento.html?servico=brunimento-de-cilindros">Solicitar orçamento</a>
+                        </div><!-- CONTEÚDO DO DETALHE FINAL -->
+                    </article><!-- DETALHE BRUNIMENTO DE CILINDROS FINAL -->
+
+                    <!-- DETALHE RETÍFICA DE VIRABREQUIM -->
+                    <article class="detalhe-servico" id="retifica-de-virabrequim">
+                        <div class="detalhe-servico-imagem">
+                            <img src="img/retificaVirabrquin.jpg" alt="Virabrequim sendo analisado durante a retífica">
+                        </div><!-- IMAGEM DO DETALHE FINAL -->
+
+                        <div class="detalhe-servico-conteudo">
+                            <p class="categoria-servico">Virabrequim</p>
+                            <h2>Retífica de virabrequim</h2>
+                            <p>Os colos do virabrequim são medidos e retificados para corrigir riscos, desgaste e perda de
+                                alinhamento. A recuperação reduz vibrações e devolve o apoio correto aos mancais.</p>
+
+                            <dl class="informacoes-servico">
+                                <div><dt>Componente trabalhado</dt><dd>Virabrequim</dd></div>
+                                <div><dt>Prazo estimado</dt><dd>Conforme avaliação da peça</dd></div>
+                            </dl>
+
+                            <h3>Etapas principais</h3>
+                            <ul class="etapas-servico">
+                                <li>Inspeção dos colos e verificação do empeno</li>
+                                <li>Retífica das superfícies de apoio</li>
+                                <li>Polimento e conferência dimensional</li>
+                            </ul>
+
+                            <a class="botao" href="orcamento.html?servico=retifica-de-virabrequim">Solicitar orçamento</a>
+                        </div><!-- CONTEÚDO DO DETALHE FINAL -->
+                    </article><!-- DETALHE RETÍFICA DE VIRABREQUIM FINAL -->
+
+                    <!-- DETALHE RETÍFICA DE CABEÇOTE -->
+                    <article class="detalhe-servico" id="retifica-de-cabecote">
+                        <div class="detalhe-servico-imagem">
+                            <img src="img/RetificaCabecote.webp" alt="Cabeçote e componentes preparados para retífica">
+                        </div><!-- IMAGEM DO DETALHE FINAL -->
+
+                        <div class="detalhe-servico-conteudo">
+                            <p class="categoria-servico">Cabeçote</p>
+                            <h2>Retífica de cabeçote</h2>
+                            <p>O cabeçote passa por testes e medições para identificar empenos, trincas e falhas de
+                                vedação. As superfícies e os componentes são recuperados conforme a necessidade.</p>
+
+                            <dl class="informacoes-servico">
+                                <div><dt>Componente trabalhado</dt><dd>Cabeçote</dd></div>
+                                <div><dt>Prazo estimado</dt><dd>Conforme avaliação da peça</dd></div>
+                            </dl>
+
+                            <h3>Etapas principais</h3>
+                            <ul class="etapas-servico">
+                                <li>Teste de vedação e inspeção visual</li>
+                                <li>Correção da superfície e das sedes</li>
+                                <li>Montagem e conferência dos componentes</li>
+                            </ul>
+
+                            <a class="botao" href="orcamento.html?servico=retifica-de-cabecote">Solicitar orçamento</a>
+                        </div><!-- CONTEÚDO DO DETALHE FINAL -->
+                    </article><!-- DETALHE RETÍFICA DE CABEÇOTE FINAL -->
+
+                    <!-- DETALHE ALINHAMENTO DE MANCAIS -->
+                    <article class="detalhe-servico" id="alinhamento-de-mancais">
+                        <div class="detalhe-servico-imagem">
+                            <img src="img/AlinhamentoMancal.webp" alt="Medição do alinhamento dos mancais do motor">
+                        </div><!-- IMAGEM DO DETALHE FINAL -->
+
+                        <div class="detalhe-servico-conteudo">
+                            <p class="categoria-servico">Bloco do motor</p>
+                            <h2>Alinhamento de mancais</h2>
+                            <p>Os alojamentos dos mancais são verificados e corrigidos para manter o virabrequim alinhado.
+                                O processo evita folgas irregulares, atrito excessivo e desgaste prematuro.</p>
+
+                            <dl class="informacoes-servico">
+                                <div><dt>Componente trabalhado</dt><dd>Mancais do bloco</dd></div>
+                                <div><dt>Prazo estimado</dt><dd>Conforme avaliação da peça</dd></div>
+                            </dl>
+
+                            <h3>Etapas principais</h3>
+                            <ul class="etapas-servico">
+                                <li>Medição dos alojamentos</li>
+                                <li>Correção do alinhamento</li>
+                                <li>Conferência da folga dos mancais</li>
+                            </ul>
+
+                            <a class="botao" href="orcamento.html?servico=alinhamento-de-mancais">Solicitar orçamento</a>
+                        </div><!-- CONTEÚDO DO DETALHE FINAL -->
+                    </article><!-- DETALHE ALINHAMENTO DE MANCAIS FINAL -->
+
+                    <!-- DETALHE RETÍFICA DE BIELAS -->
+                    <article class="detalhe-servico" id="retifica-de-bielas">
+                        <div class="detalhe-servico-imagem">
+                            <img src="img/RetificaBiela.webp" alt="Biela preparada para verificação dimensional">
+                        </div><!-- IMAGEM DO DETALHE FINAL -->
+
+                        <div class="detalhe-servico-conteudo">
+                            <p class="categoria-servico">Biela</p>
+                            <h2>Retífica de bielas</h2>
+                            <p>As bielas são avaliadas para corrigir deformações e recuperar os alojamentos. A retífica
+                                restabelece o encaixe, o alinhamento e o movimento adequado do conjunto.</p>
+
+                            <dl class="informacoes-servico">
+                                <div><dt>Componente trabalhado</dt><dd>Bielas</dd></div>
+                                <div><dt>Prazo estimado</dt><dd>Conforme avaliação da peça</dd></div>
+                            </dl>
+
+                            <h3>Etapas principais</h3>
+                            <ul class="etapas-servico">
+                                <li>Verificação do alinhamento da biela</li>
+                                <li>Recuperação dos alojamentos</li>
+                                <li>Medição e conferência final</li>
+                            </ul>
+
+                            <a class="botao" href="orcamento.html?servico=retifica-de-bielas">Solicitar orçamento</a>
+                        </div><!-- CONTEÚDO DO DETALHE FINAL -->
+                    </article><!-- DETALHE RETÍFICA DE BIELAS FINAL -->
+
+                    <!-- DETALHE TROCA DE BUCHAS DE BIELA -->
+                    <article class="detalhe-servico" id="troca-de-buchas">
+                        <div class="detalhe-servico-imagem">
+                            <img src="img/TrocaBuchasBiela.webp" alt="Buchas utilizadas na recuperação de bielas">
+                        </div><!-- IMAGEM DO DETALHE FINAL -->
+
+                        <div class="detalhe-servico-conteudo">
+                            <p class="categoria-servico">Biela</p>
+                            <h2>Troca de buchas de biela</h2>
+                            <p>As buchas desgastadas são removidas e substituídas por novas peças. Depois da instalação,
+                                o diâmetro é ajustado para garantir a folga correta e o funcionamento seguro.</p>
+
+                            <dl class="informacoes-servico">
+                                <div><dt>Componente trabalhado</dt><dd>Buchas de biela</dd></div>
+                                <div><dt>Prazo estimado</dt><dd>Conforme avaliação da peça</dd></div>
+                            </dl>
+
+                            <h3>Etapas principais</h3>
+                            <ul class="etapas-servico">
+                                <li>Remoção das buchas desgastadas</li>
+                                <li>Instalação das novas buchas</li>
+                                <li>Ajuste da medida e conferência da folga</li>
+                            </ul>
+
+                            <a class="botao" href="orcamento.html?servico=troca-de-buchas">Solicitar orçamento</a>
+                        </div><!-- CONTEÚDO DO DETALHE FINAL -->
+                    </article><!-- DETALHE TROCA DE BUCHAS DE BIELA FINAL -->
+
+                    <!-- DETALHE MONTAGEM DE MOTOR -->
+                    <article class="detalhe-servico" id="montagem-de-motor">
+                        <div class="detalhe-servico-imagem">
+                            <img src="img/MontagemMotor.webp" alt="Motor completo após processo de montagem">
+                        </div><!-- IMAGEM DO DETALHE FINAL -->
+
+                        <div class="detalhe-servico-conteudo">
+                            <p class="categoria-servico">Montagem</p>
+                            <h2>Montagem de motor</h2>
+                            <p>Os componentes são montados seguindo a sequência, as medidas e os torques recomendados. O
+                                processo inclui conferências para assegurar o movimento correto antes da entrega.</p>
+
+                            <dl class="informacoes-servico">
+                                <div><dt>Componente trabalhado</dt><dd>Motor completo</dd></div>
+                                <div><dt>Prazo estimado</dt><dd>Conforme avaliação do conjunto</dd></div>
+                            </dl>
+
+                            <h3>Etapas principais</h3>
+                            <ul class="etapas-servico">
+                                <li>Limpeza e organização dos componentes</li>
+                                <li>Montagem conforme especificações técnicas</li>
+                                <li>Conferência de folgas, torques e movimento</li>
+                            </ul>
+
+                            <a class="botao" href="orcamento.html?servico=montagem-de-motor">Solicitar orçamento</a>
+                        </div><!-- CONTEÚDO DO DETALHE FINAL -->
+                    </article><!-- DETALHE MONTAGEM DE MOTOR FINAL -->
+                </div><!-- LISTA DE DETALHES FINAL -->
+            </div><!-- INTERFACE DOS DETALHES FINAL -->
+        </section><!-- DETALHES DOS SERVIÇOS FINAL -->
+    </main><!-- CONTEÚDO PRINCIPAL FINAL -->
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="interface">
+            <p>&copy; 2026 FMS Motores - Todos os direitos reservados.</p>
+        </div><!-- INTERFACE DO RODAPÉ FINAL -->
+    </footer><!-- RODAPÉ FINAL -->
+</body>
+
+</html>
