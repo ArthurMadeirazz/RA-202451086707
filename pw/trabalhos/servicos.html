@@ -63,6 +63,30 @@
             <div class="interface">
                 <h2 id="titulo-lista-servicos">Nossos serviços</h2>
 
+                <!-- BUSCA E FILTRO DE SERVIÇOS -->
+                <form class="filtros-servicos" action="servicos.html" method="get" role="search">
+                    <div class="grupo-campo">
+                        <label for="busca-servico">Buscar serviço</label>
+                        <input type="search" id="busca-servico" name="busca"
+                            placeholder="Ex.: retífica de bloco">
+                    </div><!-- CAMPO DE BUSCA FINAL -->
+
+                    <div class="grupo-campo">
+                        <label for="categoria-servico">Categoria</label>
+                        <select id="categoria-servico" name="categoria">
+                            <option value="">Todas as categorias</option>
+                            <option value="bloco">Bloco do motor</option>
+                            <option value="cabecote">Cabeçote</option>
+                            <option value="virabrequim">Virabrequim</option>
+                            <option value="biela">Biela</option>
+                            <option value="montagem">Montagem</option>
+                        </select>
+                    </div><!-- CAMPO DE CATEGORIA FINAL -->
+
+                    <button class="botao" type="submit">Pesquisar</button>
+                    <p class="aviso-filtros">A busca e os filtros serão ativados na Fase 2 do projeto.</p>
+                </form><!-- BUSCA E FILTRO DE SERVIÇOS FINAL -->
+
                 <div class="grade-servicos">
                     <!-- CARTÃO RETÍFICA DE BLOCO -->
                     <article class="cartao-servico">
