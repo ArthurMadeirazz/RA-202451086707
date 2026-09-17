@@ -474,6 +474,97 @@ a {
     font-weight: 700;
 }
 
+/* PÁGINA SOBRE */
+.secao-sobre {
+    padding: 2rem 0 5rem;
+}
+
+.sobre-conteudo {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.img-sobre img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+}
+
+.txt-sobre h2 {
+    margin: 0.35rem 0 1rem;
+    font-size: clamp(1.75rem, 7vw, 3rem);
+    line-height: 1.2;
+}
+
+.txt-sobre p + p {
+    margin-top: 1rem;
+}
+
+.secao-diferenciais {
+    padding: 4rem 0;
+    background-color: #0d0d0d;
+}
+
+.secao-diferenciais h2 {
+    max-width: 22ch;
+    margin: 0.35rem 0 2rem;
+    font-size: clamp(1.75rem, 7vw, 3rem);
+    line-height: 1.2;
+}
+
+.grade-diferenciais {
+    display: grid;
+    gap: 1rem;
+}
+
+.diferencial {
+    padding: 1.5rem;
+    border: 1px solid #2e2e2e;
+    border-radius: 1rem;
+    background-color: var(--cor-superficie);
+}
+
+.numero-diferencial {
+    color: var(--cor-primaria);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.diferencial h3 {
+    margin: 0.75rem 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.diferencial p {
+    color: #d6d6d6;
+}
+
+.chamada-orcamento {
+    padding: 4rem 0;
+}
+
+.chamada-orcamento-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--cor-superficie);
+}
+
+.chamada-orcamento h2 {
+    margin-top: 0.35rem;
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
+}
+
+.chamada-orcamento .botao {
+    margin-top: 0;
+}
+
 /* ANIMAÇÃO DA IMAGEM DO TOPO */
 @keyframes flutuar {
     from {

@@ -1,11 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+    <!-- CONFIGURAÇÕES DA PÁGINA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <meta name="description"
+        content="Conheça a história, os valores e o compromisso com a qualidade da FMS Motores.">
+    <title>Sobre nós | FMS Motores</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
 
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ARQUIVOS CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- ACESSIBILIDADE - LINK PARA PULAR O MENU -->
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="interface cabecalho-conteudo">
+            <!-- LOGO FMS -->
+            <a class="logo" href="index.html" aria-label="Página inicial da FMS Motores">
+                <img src="img/logo-fms.png" alt="" width="83" height="36">
+            </a><!-- LOGO FMS FINAL -->
+
+            <!-- MENU PRINCIPAL -->
+            <nav class="menu-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html" aria-current="page">Sobre nós</a></li>
+                </ul>
+            </nav><!-- MENU PRINCIPAL FINAL -->
+
+            <!-- BOTÃO SOLICITAR ORÇAMENTO -->
+            <a class="botao botao-cabecalho" href="orcamento.html">Solicitar orçamento</a>
+        </div><!-- INTERFACE DO CABEÇALHO FINAL -->
+    </header><!-- CABEÇALHO FINAL -->
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal">
+        <!-- APRESENTAÇÃO DA PÁGINA SOBRE -->
+        <section class="cabecalho-pagina">
+            <div class="interface">
+                <p class="destaque">Nossa história</p>
+                <h1>Sobre a FMS Motores</h1>
+                <p>Experiência, cuidado e precisão aplicados à recuperação de motores de linha leve e pesada.</p>
+            </div><!-- INTERFACE DA APRESENTAÇÃO FINAL -->
+        </section><!-- APRESENTAÇÃO DA PÁGINA SOBRE FINAL -->
+
+        <!-- HISTÓRIA DA FMS -->
+        <section class="secao-sobre" aria-labelledby="titulo-historia-fms">
+            <div class="interface sobre-conteudo">
+                <div class="img-sobre">
+                    <img src="img/sobre-fms.jpg" alt="Profissional realizando manutenção em um motor" width="463"
+                        height="250">
+                </div><!-- IMAGEM SOBRE FINAL -->
+
+                <div class="txt-sobre">
+                    <p class="categoria-servico">FMS Motores</p>
+                    <h2 id="titulo-historia-fms">Conhecimento técnico a serviço do seu motor</h2>
+                    <p>A FMS Motores é especializada em serviços de retífica e recuperação de componentes de
+                        motores. Nosso trabalho começa com uma avaliação cuidadosa para entender as condições de cada
+                        peça e definir o processo mais adequado.</p>
+                    <p>Atendemos proprietários de veículos, mecânicos e oficinas com orientação clara, equipamentos
+                        apropriados e atenção às medidas especificadas para cada motor.</p>
+                    <p>Nosso objetivo é entregar componentes recuperados com qualidade, contribuindo para o bom
+                        funcionamento e a durabilidade do conjunto.</p>
+                </div><!-- TEXTO SOBRE FINAL -->
+            </div><!-- CONTEÚDO SOBRE FINAL -->
+        </section><!-- HISTÓRIA DA FMS FINAL -->
+
+        <!-- DIFERENCIAIS DA FMS -->
+        <section class="secao-diferenciais" aria-labelledby="titulo-diferenciais">
+            <div class="interface">
+                <p class="destaque">Nosso compromisso</p>
+                <h2 id="titulo-diferenciais">Por que escolher a FMS Motores?</h2>
+
+                <div class="grade-diferenciais">
+                    <article class="diferencial">
+                        <span class="numero-diferencial" aria-hidden="true">01</span>
+                        <h3>Experiência</h3>
+                        <p>Conhecimento prático para avaliar diferentes componentes e necessidades de cada motor.</p>
+                    </article><!-- DIFERENCIAL EXPERIÊNCIA FINAL -->
+
+                    <article class="diferencial">
+                        <span class="numero-diferencial" aria-hidden="true">02</span>
+                        <h3>Precisão</h3>
+                        <p>Medições e processos realizados com atenção às especificações de cada peça.</p>
+                    </article><!-- DIFERENCIAL PRECISÃO FINAL -->
+
+                    <article class="diferencial">
+                        <span class="numero-diferencial" aria-hidden="true">03</span>
+                        <h3>Atendimento</h3>
+                        <p>Comunicação clara para explicar a avaliação, o serviço indicado e as etapas do trabalho.</p>
+                    </article><!-- DIFERENCIAL ATENDIMENTO FINAL -->
+                </div><!-- GRADE DE DIFERENCIAIS FINAL -->
+            </div><!-- INTERFACE DOS DIFERENCIAIS FINAL -->
+        </section><!-- DIFERENCIAIS DA FMS FINAL -->
+
+        <!-- CHAMADA PARA ORÇAMENTO -->
+        <section class="chamada-orcamento">
+            <div class="interface chamada-orcamento-conteudo">
+                <div>
+                    <p class="destaque">Precisa recuperar seu motor?</p>
+                    <h2>Converse com a nossa equipe</h2>
+                </div>
+                <a class="botao" href="orcamento.html">Solicitar orçamento</a>
+            </div><!-- CONTEÚDO DA CHAMADA FINAL -->
+        </section><!-- CHAMADA PARA ORÇAMENTO FINAL -->
+    </main><!-- CONTEÚDO PRINCIPAL FINAL -->
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="interface">
+            <p>&copy; 2026 FMS Motores - Todos os direitos reservados.</p>
+        </div><!-- INTERFACE DO RODAPÉ FINAL -->
+    </footer><!-- RODAPÉ FINAL -->
 </body>
+
 </html>
