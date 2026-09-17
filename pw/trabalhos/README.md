@@ -1,19 +1,49 @@
-# FMS Motores
+# FMS Motores — Fase 1
 
-Projeto desenvolvido para a disciplina de Programação Web.
+Primeira versão do site institucional da FMS Motores, desenvolvida como trabalho da disciplina de Programação Web.
 
-## Fase 1
+Nesta fase, o projeto utiliza somente HTML5 e CSS3. A estrutura foi preparada para ser transformada em uma aplicação React durante a Fase 2.
 
-A primeira fase utiliza HTML5 e CSS3 para construir a interface responsiva do site da FMS Motores.
+## Páginas
 
-### Páginas previstas
+- `index.html` — página inicial, apresentação da empresa e serviços em destaque;
+- `servicos.html` — catálogo com oito serviços e interface de busca e filtro;
+- `detalhes.html` — informações completas de cada serviço;
+- `sobre.html` — história e diferenciais da FMS Motores;
+- `orcamento.html` — formulário para solicitação de orçamento.
 
-- Página inicial
-- Serviços
-- Detalhes do serviço
-- Solicitação de orçamento
+## Recursos utilizados
 
-### Tecnologias
+- HTML5 semântico;
+- CSS próprio com variáveis;
+- Flexbox e CSS Grid;
+- desenvolvimento mobile-first;
+- breakpoints para tablets e desktops;
+- campos de formulário com validação HTML;
+- navegação por teclado e recursos de acessibilidade.
 
-- HTML5
-- CSS3
+## Estrutura do projeto
+
+```text
+trabalhos/
+├── css/
+│   ├── responsive.css
+│   └── style.css
+├── img/
+├── detalhes.html
+├── index.html
+├── orcamento.html
+├── servicos.html
+├── sobre.html
+└── README.md
+```
+
+## Como executar
+
+Abra o arquivo `index.html` no navegador ou utilize a extensão Live Server no Visual Studio Code.
+
+Não é necessário instalar dependências para executar a Fase 1.
+
+## Autor
+
+Arthur Madeira Souza — RA 202451086707.
