@@ -77,6 +77,26 @@
         flex-direction: row;
         align-items: center;
     }
+
+    /* PÁGINA INICIAL */
+    .cabecalho-secao {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .grade-destaques {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .resumo-sobre-conteudo {
+        grid-template-columns: minmax(16rem, 0.85fr) minmax(0, 1.15fr);
+        gap: 3rem;
+    }
+
+    /* RODAPÉ */
+    .rodape-conteudo {
+        grid-template-columns: minmax(16rem, 1.5fr) repeat(2, minmax(10rem, 1fr));
+    }
 }
 
 /* DESKTOPS */
