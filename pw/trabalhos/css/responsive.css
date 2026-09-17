@@ -56,10 +56,11 @@
     /* DETALHES DOS SERVIÇOS */
     .detalhe-servico {
         grid-template-columns: minmax(14rem, 0.85fr) minmax(0, 1.15fr);
+        gap: 2rem;
     }
 
     .detalhe-servico-conteudo {
-        padding: 2rem;
+        padding: 0;
     }
 
     .informacoes-servico {
@@ -80,10 +81,6 @@
     .sobre-conteudo {
         grid-template-columns: minmax(16rem, 0.85fr) minmax(0, 1.15fr);
         gap: 3rem;
-    }
-
-    .grade-diferenciais {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .chamada-orcamento-conteudo {
@@ -125,6 +122,6 @@
     }
 
     .detalhe-servico-conteudo {
-        padding: 2.5rem;
+        padding: 0;
     }
 }

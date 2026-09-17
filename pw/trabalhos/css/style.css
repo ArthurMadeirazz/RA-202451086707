@@ -322,29 +322,23 @@ a {
 
 .lista-detalhes {
     display: grid;
-    gap: 2rem;
 }
 
 .detalhe-servico {
     display: grid;
+    gap: 1.5rem;
+    padding: 2rem 0;
     scroll-margin-top: 1rem;
-    overflow: hidden;
-    border: 1px solid #2e2e2e;
-    border-radius: 1rem;
-    background-color: var(--cor-superficie);
+    border-bottom: 1px solid #2e2e2e;
 }
 
 .detalhe-servico:target {
-    border-color: var(--cor-primaria);
-    box-shadow: 0 0 18px rgba(231, 190, 8, 0.25);
+    border-bottom-color: var(--cor-primaria);
 }
 
 .detalhe-servico-imagem {
     display: grid;
-    min-height: 14rem;
-    padding: 1.5rem;
     place-items: center;
-    background: linear-gradient(135deg, #252525, #0c0c0c);
 }
 
 .detalhe-servico-imagem img {
@@ -352,11 +346,12 @@ a {
     width: 100%;
     max-width: 24rem;
     max-height: 18rem;
+    border-radius: 0.5rem;
     object-fit: contain;
 }
 
 .detalhe-servico-conteudo {
-    padding: 1.5rem;
+    padding: 0;
 }
 
 .detalhe-servico h2 {
@@ -365,21 +360,14 @@ a {
     line-height: 1.2;
 }
 
-.detalhe-servico h3 {
-    margin: 1.5rem 0 0.5rem;
-    font-size: 1.125rem;
-}
-
 .informacoes-servico {
     display: grid;
-    gap: 0.75rem;
     margin-top: 1.5rem;
 }
 
 .informacoes-servico div {
-    padding: 1rem;
-    border-left: 3px solid var(--cor-primaria);
-    background-color: #222222;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #2e2e2e;
 }
 
 .informacoes-servico dt {
@@ -390,15 +378,6 @@ a {
 .informacoes-servico dd {
     margin-top: 0.15rem;
     font-weight: 600;
-}
-
-.etapas-servico {
-    padding-left: 1.25rem;
-    color: #d6d6d6;
-}
-
-.etapas-servico li + li {
-    margin-top: 0.35rem;
 }
 
 /* FORMULÁRIO DE ORÇAMENTO */
@@ -423,7 +402,8 @@ a {
 
 .aviso-formulario {
     padding: 1rem;
-    border-left: 3px solid var(--cor-primaria);
+    border: 1px solid #2e2e2e;
+    border-radius: 0.5rem;
     background-color: var(--cor-superficie);
     color: #d6d6d6;
 }
@@ -538,31 +518,19 @@ a {
     line-height: 1.2;
 }
 
-.grade-diferenciais {
-    display: grid;
-    gap: 1rem;
-}
-
-.diferencial {
-    padding: 1.5rem;
-    border: 1px solid #2e2e2e;
-    border-radius: 1rem;
-    background-color: var(--cor-superficie);
-}
-
-.numero-diferencial {
-    color: var(--cor-primaria);
-    font-size: 0.875rem;
-    font-weight: 700;
-}
-
-.diferencial h3 {
-    margin: 0.75rem 0 0.5rem;
-    font-size: 1.25rem;
-}
-
-.diferencial p {
+.lista-diferenciais {
+    max-width: 52rem;
+    padding-left: 1.25rem;
     color: #d6d6d6;
+}
+
+.lista-diferenciais li + li {
+    margin-top: 1rem;
+}
+
+.lista-diferenciais li::marker,
+.lista-diferenciais strong {
+    color: var(--cor-primaria);
 }
 
 .chamada-orcamento {
