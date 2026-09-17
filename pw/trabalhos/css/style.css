@@ -377,6 +377,103 @@ a {
     margin-top: 0.35rem;
 }
 
+/* FORMULÁRIO DE ORÇAMENTO */
+.secao-orcamento {
+    padding: 2rem 0 5rem;
+}
+
+.formulario-area {
+    display: grid;
+    gap: 2rem;
+    max-width: 62rem;
+    margin: 0 auto;
+}
+
+.formulario-apresentacao h2 {
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
+}
+
+.formulario-apresentacao > p {
+    margin-top: 0.5rem;
+}
+
+.aviso-formulario {
+    padding: 1rem;
+    border-left: 3px solid var(--cor-primaria);
+    background-color: var(--cor-superficie);
+    color: #d6d6d6;
+}
+
+.formulario-orcamento {
+    display: grid;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border: 1px solid #2e2e2e;
+    border-radius: 1rem;
+    background-color: var(--cor-superficie);
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.grupo-campo label {
+    font-weight: 600;
+}
+
+.grupo-campo label span {
+    color: var(--cor-primaria);
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    width: 100%;
+    border: 1px solid #4a4a4a;
+    border-radius: 0.75rem;
+    outline: none;
+    background-color: #242424;
+    color: var(--cor-texto);
+    font: inherit;
+}
+
+.grupo-campo input,
+.grupo-campo select {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+}
+
+.grupo-campo textarea {
+    min-height: 10rem;
+    padding: 1rem;
+    resize: vertical;
+}
+
+.grupo-campo input::placeholder,
+.grupo-campo textarea::placeholder {
+    color: #a9a9a9;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 2px rgba(231, 190, 8, 0.2);
+}
+
+.grupo-campo small {
+    color: #bdbdbd;
+}
+
+.formulario-acoes .botao {
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
 /* ANIMAÇÃO DA IMAGEM DO TOPO */
 @keyframes flutuar {
     from {

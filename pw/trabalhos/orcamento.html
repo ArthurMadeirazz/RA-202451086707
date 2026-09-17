@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- CONFIGURAÇÕES DA PÁGINA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicite um orçamento para os serviços de retífica da FMS Motores.">
+    <title>Solicitar orçamento | FMS Motores</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ARQUIVOS CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- ACESSIBILIDADE - LINK PARA PULAR O MENU -->
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="interface cabecalho-conteudo">
+            <!-- LOGO FMS -->
+            <a class="logo" href="index.html" aria-label="Página inicial da FMS Motores">
+                <img src="img/logo-fms.png" alt="" width="83" height="36">
+            </a><!-- LOGO FMS FINAL -->
+
+            <!-- MENU PRINCIPAL -->
+            <nav class="menu-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                </ul>
+            </nav><!-- MENU PRINCIPAL FINAL -->
+
+            <!-- BOTÃO SOLICITAR ORÇAMENTO -->
+            <a class="botao botao-cabecalho" href="orcamento.html" aria-current="page">Solicitar orçamento</a>
+        </div><!-- INTERFACE DO CABEÇALHO FINAL -->
+    </header><!-- CABEÇALHO FINAL -->
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal">
+        <!-- APRESENTAÇÃO DA PÁGINA DE ORÇAMENTO -->
+        <section class="cabecalho-pagina">
+            <div class="interface">
+                <p class="destaque">Fale com nossa equipe</p>
+                <h1>Solicite seu orçamento</h1>
+                <p>Preencha os dados do veículo e conte qual problema foi identificado. Nossa equipe entrará em
+                    contato para orientar os próximos passos.</p>
+            </div><!-- INTERFACE DA APRESENTAÇÃO FINAL -->
+        </section><!-- APRESENTAÇÃO DA PÁGINA DE ORÇAMENTO FINAL -->
+
+        <!-- FORMULÁRIO DE ORÇAMENTO -->
+        <section class="secao-orcamento" aria-labelledby="titulo-formulario-orcamento">
+            <div class="interface">
+                <div class="formulario-area">
+                    <div class="formulario-apresentacao">
+                        <h2 id="titulo-formulario-orcamento">Dados da solicitação</h2>
+                        <p>Os campos marcados com <span aria-hidden="true">*</span> são obrigatórios.</p>
+                        <p class="aviso-formulario">Na Fase 1, este formulário demonstra a interface e as validações.
+                            O envio dos dados será integrado na Fase 2.</p>
+                    </div><!-- APRESENTAÇÃO DO FORMULÁRIO FINAL -->
+
+                    <form class="formulario-orcamento" action="#" method="post">
+                        <div class="grupo-campo">
+                            <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+                            <input type="text" id="nome" name="nome" autocomplete="name" minlength="3" maxlength="80"
+                                placeholder="Digite seu nome completo" required>
+                        </div><!-- CAMPO NOME FINAL -->
+
+                        <div class="grupo-campo">
+                            <label for="telefone">Telefone <span aria-hidden="true">*</span></label>
+                            <input type="tel" id="telefone" name="telefone" autocomplete="tel"
+                                pattern="\(?[0-9]{2}\)?[ ]?[0-9]{4,5}-?[0-9]{4}" placeholder="(31) 99999-9999"
+                                title="Informe o DDD e um telefone válido" required>
+                        </div><!-- CAMPO TELEFONE FINAL -->
+
+                        <div class="grupo-campo campo-largo">
+                            <label for="email">E-mail <span aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" maxlength="120"
+                                placeholder="nome@exemplo.com" required>
+                        </div><!-- CAMPO E-MAIL FINAL -->
+
+                        <div class="grupo-campo">
+                            <label for="veiculo">Veículo <span aria-hidden="true">*</span></label>
+                            <input type="text" id="veiculo" name="veiculo" maxlength="60"
+                                placeholder="Ex.: Fiat Strada 2018" required>
+                        </div><!-- CAMPO VEÍCULO FINAL -->
+
+                        <div class="grupo-campo">
+                            <label for="motor">Modelo do motor <span aria-hidden="true">*</span></label>
+                            <input type="text" id="motor" name="motor" maxlength="80" placeholder="Ex.: Fire 1.4"
+                                required>
+                        </div><!-- CAMPO MOTOR FINAL -->
+
+                        <div class="grupo-campo campo-largo">
+                            <label for="servico">Serviço desejado <span aria-hidden="true">*</span></label>
+                            <select id="servico" name="servico" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="retifica-de-bloco">Retífica de bloco</option>
+                                <option value="brunimento-de-cilindros">Brunimento de cilindros</option>
+                                <option value="retifica-de-virabrequim">Retífica de virabrequim</option>
+                                <option value="retifica-de-cabecote">Retífica de cabeçote</option>
+                                <option value="alinhamento-de-mancais">Alinhamento de mancais</option>
+                                <option value="retifica-de-bielas">Retífica de bielas</option>
+                                <option value="troca-de-buchas">Troca de buchas de biela</option>
+                                <option value="montagem-de-motor">Montagem de motor</option>
+                            </select>
+                        </div><!-- CAMPO SERVIÇO FINAL -->
+
+                        <div class="grupo-campo campo-largo">
+                            <label for="problema">Descrição do problema <span aria-hidden="true">*</span></label>
+                            <textarea id="problema" name="problema" rows="6" minlength="20" maxlength="1000"
+                                placeholder="Descreva os sintomas, ruídos ou falhas observadas" required></textarea>
+                            <small>Use entre 20 e 1000 caracteres.</small>
+                        </div><!-- CAMPO DESCRIÇÃO FINAL -->
+
+                        <div class="campo-largo formulario-acoes">
+                            <button class="botao" type="submit">Enviar solicitação</button>
+                        </div><!-- AÇÕES DO FORMULÁRIO FINAL -->
+                    </form><!-- FORMULÁRIO DE ORÇAMENTO FINAL -->
+                </div><!-- ÁREA DO FORMULÁRIO FINAL -->
+            </div><!-- INTERFACE DO ORÇAMENTO FINAL -->
+        </section><!-- FORMULÁRIO DE ORÇAMENTO FINAL -->
+    </main><!-- CONTEÚDO PRINCIPAL FINAL -->
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="interface">
+            <p>&copy; 2026 FMS Motores - Todos os direitos reservados.</p>
+        </div><!-- INTERFACE DO RODAPÉ FINAL -->
+    </footer><!-- RODAPÉ FINAL -->
+</body>
+
+</html>

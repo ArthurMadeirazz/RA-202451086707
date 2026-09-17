@@ -52,6 +52,16 @@
     .informacoes-servico {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    /* FORMULÁRIO DE ORÇAMENTO */
+    .formulario-orcamento {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 2rem;
+    }
+
+    .campo-largo {
+        grid-column: 1 / -1;
+    }
 }
 
 /* DESKTOPS */
