@@ -1,10 +1,16 @@
+import Cabecalho from './components/Cabecalho.jsx'
+import Rodape from './components/Rodape.jsx'
+import Home from './pages/Home.jsx'
+
 // COMPONENTE PRINCIPAL DA APLICAÇÃO
 function App() {
     return (
-        <main className="interface" id="conteudo-principal">
-            <h1>FMS Motores</h1>
-            <p>Estrutura inicial da Fase 2 com React.</p>
-        </main>
+        <>
+            <a className="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
+            <Cabecalho />
+            <Home />
+            <Rodape />
+        </>
     )
 }
 
