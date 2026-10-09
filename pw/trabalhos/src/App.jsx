@@ -1,6 +1,6 @@
 import Cabecalho from './components/Cabecalho.jsx'
 import Rodape from './components/Rodape.jsx'
-import Home from './pages/Home.jsx'
+import Servicos from './pages/Servicos.jsx'
 
 // COMPONENTE PRINCIPAL DA APLICAÇÃO
 function App() {
@@ -8,7 +8,7 @@ function App() {
         <>
             <a className="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
             <Cabecalho />
-            <Home />
+            <Servicos />
             <Rodape />
         </>
     )

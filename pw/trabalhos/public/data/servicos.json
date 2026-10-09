@@ -1,0 +1,18 @@
+[{
+    "id": "retifica-de-bloco",
+    "nome": "Retífica de bloco",
+    "categoria": "Bloco do motor",
+    "componente": "Bloco",
+    "descricao": "A retífica de bloco é um processo de usinagem que visa restaurar o cilindro do bloco do motor para evitar perdas de compressão.",
+    "prazo": "Sob avaliação",
+    "imagem": "/img/UsinagemBloco.jpg"
+},
+{
+    "id": "retifica-de-cabecote",
+    "nome": "Retífica de cabeçote",
+    "categoria": "Cabeçote",
+    "descricao": "A retífica de cabeçote é um processo de usinagem que visa corrigir empenos, vedação e desgaste para recuperar o componente.",
+    "componente": "Cabeçote",
+    "prazo": "Sob avaliação",
+    "imagem": "/img/RetificaCabecote.webp"
+}]
