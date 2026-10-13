@@ -15,4 +15,58 @@
     "componente": "Cabeçote",
     "prazo": "Sob avaliação",
     "imagem": "/img/RetificaCabecote.webp"
+},
+{
+    "id": "brunimento-de-cilindros",
+    "nome": "Brunimento de cilindros",
+    "categoria": "Bloco do motor",
+    "descricao": "Acabamento das paredes dos cilindros para favorecer a vedação e o assentamento dos anéis.",
+    "componente": "Cilindros",
+    "prazo": "Sob avaliação",
+    "imagem": "/img/Brunimento.webp"
+},
+{
+    "id": "retifica-de-virabrequim",
+    "nome": "Retífica de virabrequim",
+    "categoria": "Virabrequim",
+    "descricao": "Correção das superfícies de apoio para recuperar o alinhamento e reduzir vibrações.",
+    "componente": "Virabrequim",
+    "prazo": "Sob avaliação",
+    "imagem": "/img/retifica-virabrequim.jpg"
+},
+{
+    "id": "alinhamento-de-mancais",
+    "nome": "Alinhamento de mancais",
+    "categoria": "Bloco do motor",
+    "descricao": "Verificação e correção dos alojamentos para garantir o alinhamento dos mancais do motor.",
+    "componente": "Mancais",
+    "prazo": "Sob avaliação",
+    "imagem": "/img/AlinhamentoMancal.webp"
+},
+{
+    "id": "retifica-de-bielas",
+    "nome": "Retífica de bielas",
+    "categoria": "Biela",
+    "descricao": "Recuperação dimensional das bielas para restabelecer o encaixe e o movimento adequado.",
+    "componente": "Biela",
+    "prazo": "Sob avaliação",
+    "imagem": "/img/RetificaBiela.webp"
+},
+{
+    "id": "troca-de-buchas",
+    "nome": "Troca de buchas de biela",
+    "categoria": "Biela",
+    "descricao": "Substituição e ajuste das buchas para recuperar a folga correta e a segurança do conjunto.",
+    "componente": "Biela",
+    "prazo": "Sob avaliação",
+    "imagem": "/img/TrocaBuchasBiela.webp"
+},
+{
+    "id": "montagem-de-motor",
+    "nome": "Montagem de motor",
+    "categoria": "Montagem",
+    "descricao": "Montagem técnica dos componentes seguindo medidas, sequência e especificações adequadas.",
+    "componente": "Motor completo",
+    "prazo": "Sob avaliação",
+    "imagem": "/img/MontagemMotor.webp"
 }]
