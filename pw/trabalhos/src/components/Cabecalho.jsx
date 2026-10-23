@@ -1,18 +1,20 @@
+import { Link, NavLink } from 'react-router-dom'
+
 // CABEÇALHO COMPARTILHADO DO SITE
 function Cabecalho() {
     return (
         <header className="cabecalho">
             <div className="interface cabecalho-conteudo">
                 {/* LOGO FMS */}
-                <a className="logo" href="/" aria-label="Página inicial da FMS Motores">
+                <Link className="logo" to="/" aria-label="Página inicial da FMS Motores">
                     <img src="/img/logo-fms.png" alt="" width="83" height="36" />
-                </a>{/* LOGO FMS FINAL */}
+                </Link>{/* LOGO FMS FINAL */}
 
                 {/* MENU PRINCIPAL */}
                 <nav className="menu-principal" aria-label="Navegação principal">
                     <ul>
-                        <li><a href="/" aria-current="page">Início</a></li>
-                        <li><a href="/servicos.html">Serviços</a></li>
+                        <li><NavLink to="/" end>Início</NavLink></li>
+                        <li><NavLink to="/servicos">Serviços</NavLink></li>
                         <li><a href="/sobre.html">Sobre nós</a></li>
                     </ul>
                 </nav>{/* MENU PRINCIPAL FINAL */}
