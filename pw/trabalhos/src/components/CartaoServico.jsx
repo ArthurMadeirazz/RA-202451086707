@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 // CARTÃO REUTILIZÁVEL DE SERVIÇO
 function CartaoServico({ servico }) {
     return (
@@ -17,7 +19,7 @@ function CartaoServico({ servico }) {
                 <p className="categoria-servico">{servico.categoria}</p>
                 <h3>{servico.nome}</h3>
                 <p>{servico.descricao}</p>
-                <a className="link-detalhes" href={`/detalhes.html#${servico.id}`}>Ver detalhes</a>
+                <Link className="link-detalhes" to={`/servicos/${servico.id}`}>Ver detalhes</Link>
             </div>{/* CONTEÚDO DO CARTÃO FINAL */}
         </article>
     )
